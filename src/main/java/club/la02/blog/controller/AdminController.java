@@ -22,6 +22,7 @@ public class AdminController {
     }
 
     /**
+     * 页面跳转到admin/index
      * @return
      */
     @GetMapping({ "", "/", "/index", "/index.html" })
@@ -30,6 +31,7 @@ public class AdminController {
     }
 
     /**
+     * 登录表单
      * @param username
      * @param password
      * @param verifyCode
