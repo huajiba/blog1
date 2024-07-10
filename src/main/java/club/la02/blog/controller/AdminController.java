@@ -12,16 +12,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+    /**
+     * 返回登录页面
+     * @return
+     */
     @GetMapping("login")
     public String loginPage() {
         return "admin/login";
     }
 
+    /**
+     * @return
+     */
     @GetMapping({ "", "/", "/index", "/index.html" })
     public String index() {
         return "admin/index";
     }
 
+    /**
+     * @param username
+     * @param password
+     * @param verifyCode
+     * @param session
+     * @return
+     */
     @PostMapping("login")
     public String loginApi(
             @RequestParam("userName") String username,
